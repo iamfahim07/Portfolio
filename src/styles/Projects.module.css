@@ -1,0 +1,15 @@
+.main {
+  width: 100%;
+  padding: 48px 100px;
+}
+
+.main h1 {
+  margin-bottom: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: space-between;
+  gap: 50px;
+}

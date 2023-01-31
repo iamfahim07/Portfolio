@@ -1,0 +1,36 @@
+.skills {
+  padding: 10px;
+  margin-left: 100px;
+}
+
+.skills h1 {
+  font-size: 35px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 100px 300px;
+}
+
+.svg {
+  width: 5rem;
+  height: 5rem;
+  fill: #f21e4e;
+  transition: all 0.3s ease-in-out;
+}
+
+.svg:hover {
+  transform: scale(1.3);
+  fill: #464853;
+}
+
+.svgContainer {
+  text-align: center;
+}

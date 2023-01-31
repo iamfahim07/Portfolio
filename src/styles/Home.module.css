@@ -1,0 +1,49 @@
+.main {
+  padding: 15px 20px;
+}
+
+.container {
+  width: 50%;
+  position: relative;
+  top: 70px;
+  left: 70px;
+}
+
+.first h6 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #464853;
+}
+
+.second h1 {
+  font-size: 66px;
+  font-weight: 900;
+  max-width: 500px;
+}
+
+.third {
+  margin-top: 25px;
+  width: 60%;
+}
+
+.third p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #464853;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  background-color: aquamarine;
+  margin-top: 25px;
+}
+
+.svg {
+  height: 1em;
+  width: 1em;
+}

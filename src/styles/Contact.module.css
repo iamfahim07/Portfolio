@@ -1,0 +1,99 @@
+.main {
+  padding: 40px 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoSection {
+  width: 50%;
+}
+
+.infoheading {
+  margin-bottom: 15px;
+}
+
+.infotext {
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.infotext p {
+  font-size: 18px;
+}
+
+.details {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.details p {
+  font-size: 18px;
+}
+
+.link {
+  margin-top: 40px;
+}
+
+.linkText {
+  margin-bottom: 10px;
+}
+
+.linkText p {
+  font-size: 20px;
+}
+
+.linkIcons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: #f21e4e;
+  transition: all 0.3s ease-in-out;
+}
+
+.linkSvg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.linkSvg:hover {
+  transform: scale(2);
+  fill: #464853;
+}
+
+.formSection {
+  width: 50%;
+}
+
+.textInput input,
+.textInput textarea {
+  width: 80%;
+  /* color: #495057; */
+  font-size: 1.3vw;
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #fff;
+  background-clip: padding-box;
+  margin-bottom: 10px;
+}
+
+.textInput textarea {
+  overflow: auto;
+  resize: vertical;
+  height: 166px;
+}

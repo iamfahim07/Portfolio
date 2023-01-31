@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  background-color: #fff;
+  box-shadow: 0 0.5em 1em -0.125em #0000001a, 0 0 0 1px #00000005;
+  border-radius: 3px;
+  transition: all 0.4s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.08);
+}
+
+.image img {
+  max-width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.title {
+  padding: 20px 30px;
+}
+
+.title p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #363636;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  width: 50%;
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+  padding: 15px 20px;
+  border-top: 1px solid hsl(0deg, 0%, 93%);
+}
+
+.buttons:nth-child(1) {
+  border-right: 0.5px solid hsl(0deg, 0%, 93%);
+}
+.buttons:nth-child(2) {
+  border-left: 0.5px solid hsl(0deg, 0%, 93%);
+}
+
+.button {
+  border: none;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  color: #f21e4e;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #f21e4e;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.buttons:hover .button,
+.buttons:hover .svg {
+  color: #464853;
+  fill: #464853;
+}

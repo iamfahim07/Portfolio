@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.imageContainer img {
+  padding: 20px 5px;
+}
+
+.svg {
+  height: 50px;
+  width: 50px;
+  fill: #f21e4e;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 20px 15px;
+}

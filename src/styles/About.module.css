@@ -1,0 +1,61 @@
+.am {
+  padding: 20px;
+  margin-top: 30px;
+  margin-left: 70px;
+}
+
+.am h1 {
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.imgContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.imgContainer img {
+  box-shadow: 20px 20px 20px rgb(0 0 0 / 25%);
+}
+
+.textContainer {
+  width: 50%;
+}
+
+.textContainer h3 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.description {
+  width: 80%;
+}
+
+.description p {
+  font-size: 18px;
+}
+
+.linkContainer {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  align-items: center;
+  padding-left: 180px;
+}
+
+.svg {
+  width: 1.5em;
+  height: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+.svg:hover {
+  transform: scale(2);
+}
