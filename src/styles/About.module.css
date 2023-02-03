@@ -1,10 +1,8 @@
-.am {
-  padding: 20px;
-  margin-top: 30px;
-  margin-left: 70px;
+.main {
+  min-height: 100vh;
 }
 
-.am h1 {
+.abtme h1 {
   font-size: 30px;
 }
 
@@ -12,15 +10,17 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 3%;
 }
 
 .imgContainer {
   width: 50%;
-  display: flex;
-  justify-content: center;
 }
 
 .imgContainer img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   box-shadow: 20px 20px 20px rgb(0 0 0 / 25%);
 }
 
@@ -34,20 +34,57 @@
 }
 
 .description {
-  width: 80%;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .description p {
   font-size: 18px;
 }
 
-.linkContainer {
-  width: 80%;
+.buttonContainer {
   display: flex;
   justify-content: flex-start;
-  gap: 40px;
   align-items: center;
-  padding-left: 180px;
+  gap: 15px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 22px;
+  background-color: #f21e4e;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.button span,
+.button svg {
+  color: #fff;
+  fill: #fff !important;
+}
+
+.button svg {
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 7.3%;
+  margin-top: 3%;
 }
 
 .svg {
@@ -56,6 +93,91 @@
   transition: all 0.3s ease-in-out;
 }
 
-.svg:hover {
-  transform: scale(2);
+@media only screen and (min-width: 600px) {
+  .main {
+    padding-top: 65px;
+  }
+
+  .button:hover {
+    background-color: #464853;
+  }
+
+  .svg:hover {
+    transform: scale(2);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    padding-top: 50px;
+  }
+
+  .abtme h1 {
+    font-size: 25px;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .imgContainer {
+    width: 100%;
+  }
+
+  .textContainer {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  .imgContainer img {
+    box-shadow: 12px 12px 12px rgb(0 0 0 / 25%);
+  }
+
+  .textContainer h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .description p {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-top: 50px;
+  }
+
+  .abtme h1 {
+    font-size: 23px;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .imgContainer {
+    width: 100%;
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+
+  .textContainer h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .description p {
+    font-size: 15px;
+  }
+
+  .button {
+    font-size: 15px;
+  }
 }

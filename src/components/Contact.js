@@ -1,15 +1,74 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import classes from "../styles/Contact.module.css";
+import emailjs from "@emailjs/browser";
 
-export default function Contact() {
+export default function Contact({ setShow, setIsSent }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const form = useRef(null);
+
+  async function sendEmail(e) {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const result = await emailjs.sendForm(
+        "service_igoug9r",
+        "template_n563myu",
+        form.current,
+        "wOHYCb-l6LmPeNwkr"
+      );
+      console.log(result.text);
+
+      setName("");
+      setEmail("");
+      setMessage("");
+      setIsSent(true);
+      setShow(true);
+      setLoading(false);
+    } catch (err) {
+      console.log(err.text);
+
+      setName("");
+      setEmail("");
+      setMessage("");
+      setIsSent(false);
+      setShow(true);
+      setLoading(false);
+    }
+  }
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_igoug9r",
+  //       "template_n563myu",
+  //       form.current,
+  //       "wOHYCb-l6LmPeNwkr"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
 
   return (
-    <div className={classes.main}>
+    <div className={classes.main} id="contact">
       <div className={classes.container}>
-        <div className={classes.infoSection}>
+        <div
+          className={classes.infoSection}
+          data-aos="zoom-in-right"
+          data-aos-duration="1000"
+        >
           <div className={classes.infoheading}>
             <h1>Get in Touch</h1>
           </div>
@@ -111,14 +170,19 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className={classes.formSection}>
-          <div>
-            <h1>Contact Me</h1>
+        <div
+          className={classes.formSection}
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+        >
+          <div className={classes.formHeader}>
+            <h1>Contact Form</h1>
           </div>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <div className={classes.textInput}>
               <input
                 type="text"
+                name="user_name"
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -129,6 +193,7 @@ export default function Contact() {
             <div className={classes.textInput}>
               <input
                 type="email"
+                name="user_email"
                 placeholder="Email Address..."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -139,6 +204,7 @@ export default function Contact() {
             <div className={classes.textInput}>
               <textarea
                 type="text"
+                name="message"
                 placeholder="Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -146,9 +212,9 @@ export default function Contact() {
               />
             </div>
 
-            <div>
-              <button>Submit</button>
-              <div>
+            <div className={classes.button}>
+              <button type="submit" disabled={loading}>
+                <span>Submit</span>
                 <svg
                   className={classes.svg}
                   xmlns="http://www.w3.org/2000/svg"
@@ -156,6 +222,15 @@ export default function Contact() {
                 >
                   <path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z" />
                 </svg>
+              </button>
+              <div>
+                {/* <svg
+                  className={classes.svg}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z" />
+                </svg> */}
               </div>
             </div>
           </form>

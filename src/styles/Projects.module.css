@@ -1,10 +1,10 @@
 .main {
   width: 100%;
-  padding: 48px 100px;
+  min-height: 100vh;
 }
 
 .main h1 {
-  margin-bottom: 20px;
+  font-size: 35px;
 }
 
 .container {
@@ -12,4 +12,37 @@
   grid-template-columns: 45% 45%;
   justify-content: space-between;
   gap: 50px;
+  margin-top: 3%;
+}
+
+@media only screen and (min-width: 600px) {
+  .main {
+    padding-top: 65px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    min-height: 80vh;
+    padding-top: 50px;
+  }
+
+  .main h1 {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-top: 50px;
+  }
+
+  .main h1 {
+    font-size: 23px;
+  }
+
+  .container {
+    grid-template-columns: 95%;
+    gap: 30px;
+  }
 }

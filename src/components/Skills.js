@@ -2,12 +2,20 @@ import classes from "../styles/Skills.module.css";
 
 export default function Skills() {
   return (
-    <div>
-      <div className={classes.skills}>
+    <div className={classes.main} id="skills">
+      <div
+        className={classes.skills}
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <h1>Skills</h1>
       </div>
 
-      <div className={classes.iconContainer}>
+      <div
+        className={classes.iconContainer}
+        data-aos="zoom-in-right"
+        data-aos-duration="1000"
+      >
         <div className={classes.icons}>
           <div className={classes.svgContainer}>
             <svg

@@ -1,24 +1,27 @@
 .main {
-  padding: 40px 40px;
+  min-height: 80vh;
+  margin-top: 35px;
 }
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .infoSection {
   width: 50%;
 }
 
-.infoheading {
-  margin-bottom: 15px;
+.infoheading h1 {
+  font-size: 35px;
 }
 
 .infotext {
   width: 80%;
-  margin-bottom: 25px;
+  margin-bottom: 4%;
+  margin-top: 3%;
 }
 
 .infotext p {
@@ -38,7 +41,7 @@
 }
 
 .link {
-  margin-top: 40px;
+  margin-top: 5%;
 }
 
 .linkText {
@@ -70,30 +73,132 @@
   transition: all 0.3s ease-in-out;
 }
 
-.linkSvg:hover {
-  transform: scale(2);
-  fill: #464853;
-}
-
 .formSection {
   width: 50%;
 }
 
+.formHeader {
+  margin-bottom: 20px;
+}
+
+.formHeader h1 {
+  font-size: 30px;
+}
+
 .textInput input,
 .textInput textarea {
-  width: 80%;
-  /* color: #495057; */
+  width: 100%;
   font-size: 1.3vw;
   padding: 10px 15px;
   border: 1px solid #ced4da;
   border-radius: 5px;
   background-color: #fff;
-  background-clip: padding-box;
   margin-bottom: 10px;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .textInput textarea {
   overflow: auto;
   resize: vertical;
   height: 166px;
+}
+
+.textInput input:focus,
+.textInput textarea:focus {
+  box-shadow: 2px 2px rgb(0, 0, 0, 0.25);
+}
+
+.button button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 24px;
+  background-color: #f21e4e;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.button button span,
+.button button svg {
+  color: #fff;
+  fill: #fff !important;
+}
+
+@media only screen and (min-width: 600px) {
+  .main {
+    padding-top: 65px;
+  }
+
+  .linkSvg:hover {
+    transform: scale(2);
+    fill: #464853;
+  }
+
+  .button button:hover {
+    background-color: #464853;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    padding-top: 50px;
+    margin-top: 30px;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .infoSection {
+    width: 100%;
+  }
+
+  .infoheading h1 {
+    font-size: 25px;
+  }
+
+  .infotext {
+    width: 100%;
+  }
+
+  .formSection {
+    width: 100%;
+    margin-top: 8%;
+  }
+
+  .formHeader {
+    margin-bottom: 10px;
+  }
+
+  .formHeader h1 {
+    font-size: 25px;
+  }
+
+  .textInput input,
+  .textInput textarea {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    margin-top: 10px;
+    padding-top: 50px;
+  }
+
+  .link {
+    margin-top: 10%;
+  }
+
+  .formSection {
+    margin-top: 13%;
+  }
 }

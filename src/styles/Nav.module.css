@@ -2,11 +2,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 0px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #ced4da;
 }
 
 .imageContainer img {
   padding: 20px 5px;
+}
+
+.bars {
+  display: none;
 }
 
 .svg {
@@ -21,8 +33,82 @@
   align-items: center;
 }
 
+.textContainer a {
+  text-decoration: none;
+}
+
 .text {
   font-size: 18px;
   font-weight: 800;
   padding: 20px 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  .text:hover {
+    color: #f21e4e;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .imageContainer img {
+    padding: 15px 5px;
+  }
+
+  .svg {
+    height: 45px;
+    width: 45px;
+  }
+
+  .text {
+    font-size: 17px;
+    padding: 15px 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "img bars"
+      "txt txt";
+    justify-content: center;
+    width: 100%;
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: img;
+  }
+
+  .bars {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: bars;
+  }
+
+  .barContainer {
+    padding: 4px 8px 1px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .bars svg {
+    height: 22px;
+    width: 22px;
+    fill: #f21e4e;
+  }
+
+  .textContainer {
+    display: none;
+    text-align: center;
+    grid-area: txt;
+  }
+
+  .show {
+    display: block !important;
+  }
 }

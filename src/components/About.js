@@ -1,29 +1,40 @@
 import classes from "../styles/About.module.css";
-import img from "../assets/Fahim.jpg";
-import Button from "./Button";
-import resume from "../assets/Resume.pdf";
+import img from "../assets/My Self/Fahim.jpg";
+import resume from "../assets/Resume/Resume.pdf";
 
 export default function About() {
   return (
-    <section>
-      <div className={classes.am}>
+    <section className={classes.main} id="about">
+      <div
+        className={classes.abtme}
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <h1>About Me</h1>
       </div>
       <div className={classes.container}>
-        <div className={classes.imgContainer}>
-          <img src={img} alt={"Fahim"} width="400" />
+        <div
+          className={classes.imgContainer}
+          data-aos="zoom-in-right"
+          data-aos-duration="1000"
+        >
+          <img src={img} alt={"Fahim"} width="400" height="450" />
         </div>
-        <div className={classes.textContainer}>
+        <div
+          className={classes.textContainer}
+          data-aos="fade-up-right"
+          data-aos-duration="1000"
+        >
           <div>
             <h3>Hello, I'm Faijur Rahman Fahim, from Bangladesh</h3>
           </div>
           <div className={classes.description}>
             <p>
-              I am a dynamic web developer with a passion for creating visually
+              I am a flexible web developer with a passion for creating visually
               stunning and user-friendly websites.
               <br /> <br />
-              With a strong background in front-end development, I have a keen
-              eye for design and a thorough understanding of the latest web
+              With a competent background in front-end development, I have a
+              keen eye for design and a good understanding of the latest web
               technologies.
               <br /> <br />I enjoy blending logic and creativity to craft
               websites that not only look great but also provide an exceptional
@@ -32,13 +43,35 @@ export default function About() {
               develop websites that are not only functional but also visually
               appealing, accessible and easy to use. <br /> <br />I am a team
               player and always willing to go the extra mile to deliver quality
-              work on time. Let's work together and create something amazing!
+              work. Let's work together and create something amazing!
             </p>
           </div>
 
-          <a href={resume}>
-            <Button>My Resume</Button>
-          </a>
+          <div className={classes.buttonContainer}>
+            <a
+              className={classes.link}
+              href={
+                "https://drive.google.com/file/d/1OUDdGSb3xcIuciNAHgvyf_kG0o5gTC9x/view?usp=sharing"
+              }
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              <button className={classes.button}>
+                <span>My Resume</span>{" "}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                </svg>
+              </button>
+            </a>
+            <a className={classes.link} href={resume}>
+              <button className={classes.button}>
+                <span>My Resume</span>{" "}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                  <path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
+                </svg>
+              </button>
+            </a>
+          </div>
 
           <div className={classes.linkContainer}>
             <a

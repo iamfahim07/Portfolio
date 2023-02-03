@@ -1,12 +1,10 @@
 .main {
-  padding: 15px 20px;
+  min-height: 75vh;
+  margin-top: 65px;
 }
 
 .container {
   width: 50%;
-  position: relative;
-  top: 70px;
-  left: 70px;
 }
 
 .first h6 {
@@ -43,7 +41,97 @@
   margin-top: 25px;
 }
 
+.buttonContainer a {
+  text-decoration: none;
+}
+
+.buttonContainer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 24px;
+  background-color: #f21e4e;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonContainer button span,
+.buttonContainer button svg {
+  color: #fff;
+  fill: #fff !important;
+}
+
 .svg {
   height: 1em;
   width: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .main {
+    padding-top: 65px;
+  }
+
+  .buttonContainer button:hover {
+    background-color: #464853;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    min-height: 60vh;
+    padding-top: 52px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .third {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .first h6 {
+    font-size: 16px;
+  }
+
+  .second h1 {
+    font-size: 46px;
+  }
+
+  .third p {
+    font-size: 16px;
+  }
+
+  .buttonContainer button {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-top: 65px;
+    margin-top: 65px;
+  }
+
+  .first h6 {
+    font-size: 14px;
+  }
+
+  .second h1 {
+    font-size: 30px;
+  }
+
+  .third p {
+    font-size: 15px;
+  }
+
+  .buttonContainer button {
+    font-size: 15px;
+  }
 }

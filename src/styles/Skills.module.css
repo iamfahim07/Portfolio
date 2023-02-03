@@ -1,6 +1,5 @@
-.skills {
-  padding: 10px;
-  margin-left: 100px;
+.main {
+  min-height: 90vh;
 }
 
 .skills h1 {
@@ -10,13 +9,15 @@
 .iconContainer {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+  margin-top: 3%;
 }
 
 .icons {
+  width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 100px 300px;
+  gap: 30% 30%;
 }
 
 .svg {
@@ -33,4 +34,47 @@
 
 .svgContainer {
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .main {
+    padding-top: 65px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    min-height: 75vh;
+    margin-top: 15%;
+    padding-top: 50px;
+  }
+
+  .skills h1 {
+    font-size: 25px;
+  }
+
+  .svg {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    min-height: 65vh;
+    padding-top: 50px;
+  }
+
+  .skills h1 {
+    font-size: 23px;
+  }
+
+  .svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .icons {
+    gap: 20% 20%;
+  }
 }

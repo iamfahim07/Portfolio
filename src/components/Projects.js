@@ -7,9 +7,15 @@ import classes from "../styles/Projects.module.css";
 
 export default function Projects() {
   return (
-    <div className={classes.main}>
-      <h1>Projects</h1>
-      <div className={classes.container}>
+    <div className={classes.main} id="projects">
+      <h1 data-aos="fade-right" data-aos-duration="1000">
+        Projects
+      </h1>
+      <div
+        className={classes.container}
+        data-aos="zoom-in-right"
+        data-aos-duration="1000"
+      >
         <Project
           img={artGallery}
           alt={"Art Gallery"}

@@ -8,10 +8,6 @@
   transition: all 0.4s ease-in-out;
 }
 
-.container:hover {
-  transform: scale(1.08);
-}
-
 .image img {
   max-width: 100%;
   object-fit: cover;
@@ -75,8 +71,14 @@
   cursor: pointer;
 }
 
-.buttons:hover .button,
-.buttons:hover .svg {
-  color: #464853;
-  fill: #464853;
+@media only screen and (min-width: 600px) {
+  .container:hover {
+    transform: scale(1.08);
+  }
+
+  .buttons:hover .button,
+  .buttons:hover .svg {
+    color: #464853;
+    fill: #464853;
+  }
 }
