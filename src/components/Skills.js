@@ -8,7 +8,7 @@ export default function Skills() {
         data-aos="fade-right"
         data-aos-duration="1000"
       >
-        <h1>Skills</h1>
+        <h1>Skills & Tools</h1>
       </div>
 
       <div
@@ -103,6 +103,17 @@ export default function Skills() {
               <path d="m61.44,0q-24.57,0 -30.72,24.43q9.22,-12.21 21.5,-9.16c4.68,1.16 8,4.53 11.72,8.26c6,6.08 13,13.11 28.22,13.11q24.57,0 30.72,-24.43q-9.21,12.22 -21.5,9.16c-4.68,-1.16 -8,-4.53 -11.72,-8.26c-6.02,-6.11 -12.99,-13.11 -28.22,-13.11zm-30.72,36.64q-24.57,0 -30.72,24.43q9.23,-12.21 21.5,-9.16c4.68,1.16 8,4.53 11.72,8.27c6,6.07 13,13.11 28.22,13.11q24.57,0 30.72,-24.43q-9.21,12.21 -21.5,9.14c-4.68,-1.16 -8,-4.53 -11.72,-8.26c-6,-6.08 -13,-13.12 -28.22,-13.12l0,0.02z" />
             </svg>
             <h4>Tailwind CSS</h4>
+          </div>
+
+          <div className={classes.svgContainer}>
+            <svg
+              className={classes.svg}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+            >
+              <path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" />
+            </svg>
+            <h4>npm</h4>
           </div>
         </div>
       </div>
