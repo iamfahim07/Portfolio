@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0px 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -50,6 +50,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .container {
+    padding: 0px 20px;
+  }
+
   .imageContainer img {
     padding: 15px 5px;
   }
@@ -74,6 +78,7 @@
       "txt txt";
     justify-content: center;
     width: 100%;
+    padding: 0px 20px;
   }
 
   .imageContainer {
@@ -103,12 +108,17 @@
   }
 
   .textContainer {
-    display: none;
+    display: block;
+    height: 0px;
+    transform: scaleY(0);
+    overflow: hidden;
     text-align: center;
     grid-area: txt;
+    transition: all 0.3s ease-in-out;
   }
 
   .show {
-    display: block !important;
+    height: 255px;
+    transform: scaleY(1);
   }
 }

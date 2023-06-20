@@ -1,4 +1,5 @@
 import classes from "../styles/Home.module.css";
+import img from "../assets/Side Images/vector.png";
 
 export default function Home() {
   return (
@@ -49,6 +50,10 @@ export default function Home() {
             </button>
           </a>
         </div>
+      </div>
+
+      <div className={classes.vectorContainer}>
+        <img src={img} alt="Vector" />
       </div>
     </section>
   );
