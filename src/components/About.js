@@ -51,7 +51,7 @@ export default function About() {
             <a
               className={classes.link}
               href={
-                "https://drive.google.com/file/d/1WIKs-3f0hxvmGnVqm2FdPsVA2Rr3Ur7u/view?usp=drive_link"
+                "https://drive.google.com/file/d/1Qr0XpkeiIwX_2RyoldJdUFGzvAOilHtR/view?usp=sharing"
               }
               target={"_blank"}
               rel={"noreferrer"}
